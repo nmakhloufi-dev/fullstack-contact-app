@@ -10,6 +10,9 @@
     "build-client":"cd frontend && npm run build",
     "start-client":"cd frontend && npm run start"
   },
+  "engines":{
+    "node":">=18.14.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
