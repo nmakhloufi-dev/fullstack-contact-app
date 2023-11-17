@@ -17,14 +17,18 @@ function Contacts() {
     navigate("/add-contact");
   };
   const handleDelete = (id) => {
-    axios.delete("http://localhost:5000/api/contacts/" + id).then((res) => {
-      setContacts(res.data);
-    });
+    axios
+      .delete("https://contact-app-yj7a.onrender.com/api/contacts/" + id)
+      .then((res) => {
+        setContacts(res.data);
+      });
   };
   useEffect(() => {
-    axios.get("http://localhost:5000/api/contacts").then((res) => {
-      setContacts(res.data);
-    });
+    axios
+      .get("https://contact-app-yj7a.onrender.com/api/contacts")
+      .then((res) => {
+        setContacts(res.data);
+      });
   }, []);
   return (
     <div>
