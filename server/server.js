@@ -17,7 +17,11 @@ const cors = require("cors");
 const connectDB = require("./database/dbConnection");
 connectDB();
 app.use(express.json());
-app.use(cors());
+
+const corsOption = {
+  origin: "https://contact-frontend-gub8.onrender.com/",
+};
+app.use(cors(corsOption));
 app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 5000;
