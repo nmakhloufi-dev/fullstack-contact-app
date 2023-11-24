@@ -8,7 +8,7 @@ function NewContact() {
   const navigate = useNavigate();
   const handleAdd = () => {
     axios
-      .post("https://mern-contact-server.onrender.com/api/contacts/", {
+      .post("https://fullstack-contactapp-backend-fj8m.onrender.com/", {
         name: name,
         email: email,
         phone: phone,

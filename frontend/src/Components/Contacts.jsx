@@ -18,14 +18,14 @@ function Contacts() {
   };
   const handleDelete = (id) => {
     axios
-      .delete("https://mern-contact-server.onrender.com/api/contacts/" + id)
+      .delete("https://fullstack-contactapp-backend-fj8m.onrender.com/" + id)
       .then((res) => {
         setContacts(res.data);
       });
   };
   useEffect(() => {
     axios
-      .get("https://mern-contact-server.onrender.com/api/contacts")
+      .get("https://fullstack-contactapp-backend-fj8m.onrender.com")
       .then((res) => {
         setContacts(res.data);
       });
