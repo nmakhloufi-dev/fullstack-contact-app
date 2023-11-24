@@ -19,14 +19,14 @@ connectDB();
 app.use(express.json());
 
 const corsOption = {
-  origin: "https://mern-contact-frontend.onrender.com",
+  origin: "https://fullstack-contactapp-frontend-s93c.onrender.com",
 };
 app.use(cors(corsOption));
 
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://mern-contact-frontend.onrender.com"
+    "https://fullstack-contactapp-frontend-s93c.onrender.com"
   );
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type");
