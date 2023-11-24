@@ -18,14 +18,19 @@ function Contacts() {
   };
   const handleDelete = (id) => {
     axios
-      .delete("https://fullstack-contactapp-backend-fj8m.onrender.com/" + id)
+      .delete(
+        "https://fullstack-contactapp-backend-fj8m.onrender.com/api/contacts" +
+          id
+      )
       .then((res) => {
         setContacts(res.data);
       });
   };
   useEffect(() => {
     axios
-      .get("https://fullstack-contactapp-backend-fj8m.onrender.com")
+      .get(
+        "https://fullstack-contactapp-backend-fj8m.onrender.com/api/contacts"
+      )
       .then((res) => {
         setContacts(res.data);
       });
